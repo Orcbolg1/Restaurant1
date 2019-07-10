@@ -29,8 +29,8 @@ public class Login extends javax.swing.JFrame {
      * Set default username and password
      */
     private void setDefaultUserName() {
-        this.userNameField.setText("shahin");
-        this.passwordField.setText("shahin");
+        this.userNameField.setText("username");
+        this.passwordField.setText("password");
     }
 
     /**
@@ -51,8 +51,8 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        loginPanel.setBackground(new java.awt.Color(153, 153, 255));
-        loginPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "FSKTM Restaurant", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 0, 13), new java.awt.Color(0, 0, 204))); // NOI18N
+        loginPanel.setBackground(new java.awt.Color(255, 255, 204));
+        loginPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "EasyPress Restaurant", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13), new java.awt.Color(0, 0, 204))); // NOI18N
         loginPanel.setForeground(new java.awt.Color(153, 153, 255));
         loginPanel.setToolTipText("");
         loginPanel.setName(""); // NOI18N
@@ -111,21 +111,23 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
+        userNameLabel.getAccessibleContext().setAccessibleName("Username: ");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(43, 43, 43)
                 .addComponent(loginPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(54, 54, 54)
+                .addGap(62, 62, 62)
                 .addComponent(loginPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addGap(59, 59, 59))
         );
 
         loginPanel.getAccessibleContext().setAccessibleName("");
@@ -134,7 +136,7 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        if (userNameField.getText().equalsIgnoreCase("shahin")) {
+        if (userNameField.getText().equalsIgnoreCase("username")) {
             JOptionPane.showMessageDialog(this, "Access granted");
             this.dispose();
             MainMenu mainMenu = new MainMenu();
